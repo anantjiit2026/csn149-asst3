@@ -1,0 +1,11 @@
+
+//Test if a pixel is in a bounding box
+__device__ __inline__ 
+int pixelInBoxTest(short minX, short minY, short maxX, short maxY, float px, float py){
+    if(minX<=px && px<maxX && minY<=py && py<maxY){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
